@@ -8,5 +8,6 @@
 - [min/max/fit content](https://blog.logrocket.com/understanding-min-content-max-content-fit-content-css/)
 - [Background images](https://www.w3schools.com/cssref/pr_background-image.php)
 - [MinMax Deep Dive](https://ishadeed.com/article/css-grid-minmax/)
+- [Ellipses on N lines](https://stackoverflow.com/questions/5269713/css-ellipsis-on-second-line)
 ### Updates
 Should I adjust so that text remains consistent on zoom?

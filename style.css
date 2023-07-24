@@ -14,13 +14,14 @@ body{
     margin: 0px;
     padding: 0px;
     height: 100vh;
+    width: 100vw;
     font-family: 'Roboto', sans-serif;
     /* min-height: var(--minHeight); */
 }
 
 #Dashboard{
     display: grid;
-    grid-template-columns: minmax(10%,15%) minmax(auto,4fr);
+    grid-template-columns: minmax(min-content,15%) minmax(auto,4fr);
     grid-template-rows: 1fr minmax(min-content,6fr);
     height: 100%;
 
@@ -29,7 +30,7 @@ body{
 header{
     grid-column: 2 / -1;
     grid-row: 1 / 2;
-    background-color: #f0fdfa;
+    background-color: #f8fafc;
 }
 nav{
     grid-column: 1 / 2;
@@ -45,10 +46,12 @@ main{
     grid-column: 2 / -1;
     grid-row: 2 / -1;
     display: grid;
-    grid-template-columns: 4fr minmax(375px,1fr);
+    grid-template-columns: minmax(min-content,4fr) minmax(min-content,1fr);
     grid-template-rows: repeat(2, minmax(auto,50%));
-    min-width: 1115px;
     overflow: hidden;
+    min-width: min-content;
+    padding: 0px 20px 20px 20px;
+    background-color: #cbd5e1;
 
 } 
 
@@ -220,7 +223,6 @@ header svg{
     grid-template-columns: repeat(2, minmax(auto,1fr));
     grid-template-rows: repeat(3, minmax(auto,1fr));
     gap: 35px;
-    padding: 0px 20px 20px 20px;
     /* max-height: 100vh; */
     /* height: clamp(550px, 100%, 100vh); */
     
@@ -228,20 +230,19 @@ header svg{
 .cardGroup > .card{
     background-color: goldenrod;
     border-radius: 8px;
-    /* height: clamp(150px, 100%, 150px); */
-    min-width: 400px;
     position: relative;
 }
 .cardGroup > .card > .cardinfo{
     background-color: white;
     height: 100%;
-    width: 98%;
+    width: 98.0%;
     transform: translateX(2%);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     display: grid;
     grid-template-rows: 1.3fr 2.4fr 1.3fr;
     padding-left: 30px;
+    padding-right: 10px;
 
 }
 .cardinfo > .title{
@@ -250,6 +251,8 @@ header svg{
 }
 .cardinfo > .body {
     font-size: 13px;
+    min-width: 45ch;
+    max-width: 90ch;
 }
 
 
@@ -268,7 +271,7 @@ header svg{
 
 .announcementListcont,
 .trendingList{
-    padding: 0px 30px 10px 10px;
+    padding: 0px 0px 0px 20px;
     display: grid;
     grid-template-rows: 50px 1fr;
     height: min-content;
@@ -285,6 +288,7 @@ header svg{
     display: flex;
     align-items: flex-end;
     padding-bottom: 10px;
+    
 }
 .announcementListcont > .container{
     background-color: white;
@@ -302,6 +306,15 @@ header svg{
 .announcementListcont > .container > .card{
     position: relative;
     padding: 5%;
+}
+.announcementListcont > .container > .card >.body{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+
 }
 .announcementListcont > .container > .card:nth-child(1)::after,
 .announcementListcont > .container > .card:nth-child(2)::after{
@@ -339,7 +352,7 @@ header svg{
     font-size: 12px;
     grid-row: 2/3;
     display: grid;
-    grid-template-rows: repeat(3, minmax(auto,1fr));
+    grid-template-rows: repeat(auto-fit, minmax(10px,1fr));
 }
 
 .trendingList > .container .userIcon {
@@ -350,6 +363,7 @@ header svg{
     background-position: center;
     background-repeat: no-repeat;
     background-size: 70%;    
+    display: inline-block;
 }
 
 .trendingList > .container >.usercard:nth-child(1) >.userIcon{
@@ -368,4 +382,25 @@ header svg{
 .trendingList > .container >.usercard:nth-child(4) >.userIcon{
     background-image: url("./img/usr-img-5.png");
     background-color: lightgreen;
+}
+
+.usercard{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-content: center;
+    align-items: center;
+}
+
+.trendingList .userInfo{
+    display: inline-grid;
+    padding-left: 10px;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: 1fr;
+    gap: 0px;
+}
+.trendingList .userInfo p:nth-child(1){
+    font-weight: bold;
+}
+.trendingList .userInfo p:nth-child(2){
+    font-size: 1rem;
 }
