@@ -231,11 +231,14 @@ header svg{
     background-color: goldenrod;
     border-radius: 8px;
     position: relative;
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(144,143,161,0.53);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(144,143,161,0.53);
+    box-shadow: 2px 2px 8px 0px rgba(144,143,161,0.53);
 }
 .cardGroup > .card > .cardinfo{
     background-color: white;
     height: 100%;
-    width: 98.0%;
+    width: 98.1%;
     transform: translateX(2%);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -298,6 +301,9 @@ header svg{
     grid-row: 2/3;
     display: grid;
     grid-template-rows: repeat(3, minmax(auto,1fr));
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(144,143,161,0.53);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(144,143,161,0.53);
+    box-shadow: 2px 2px 8px 0px rgba(144,143,161,0.53);
 }
 .announcementListcont > .container .title{
     font-weight: bold;
@@ -353,6 +359,9 @@ header svg{
     grid-row: 2/3;
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(10px,1fr));
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(144,143,161,0.53);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(144,143,161,0.53);
+    box-shadow: 2px 2px 8px 0px rgba(144,143,161,0.53);
 }
 
 .trendingList > .container .userIcon {

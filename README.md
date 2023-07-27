@@ -10,4 +10,8 @@
 - [MinMax Deep Dive](https://ishadeed.com/article/css-grid-minmax/)
 - [Ellipses on N lines](https://stackoverflow.com/questions/5269713/css-ellipsis-on-second-line)
 ### Updates
-Should I adjust so that text remains consistent on zoom?
+
+I want to revisit this to keep font consistent on zoom.
+Try again from scratch to fix up the styles. Make it cleaner.
+Can I add some effects to the svg icons? At least change the color on clicks.
+Update Nav menu to be icons only after certain page width.
